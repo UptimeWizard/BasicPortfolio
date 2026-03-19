@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mišo Stamenić</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Pozdrav, ovo je moj porfolio</h2>
+</section>
+
+<section id="about">
+    <h2>O meni</h2>
+    <p>SRE inženjer sa preko deset godina iskustva u radu sa različitim globalnim kompanijama. Specijalizovan za pouzdanost sistema, automatizaciju i upravljanje infrastrukturom u produkcijskim okruženjima. Trenutno živim i radim u Austriji, gdje nastavljam da gradim i unapređujem skalabilne i stabilne sisteme.</p>
+</section>
+
+<section id="projects">
+    <h2>Projekti</h2>
+
+    <div class="project">
+        <h3>Terraform AWS Multi-Account Infrastructure</h3>
+        <p>Dizajn i implementacija multi-account AWS infrastrukture koristeći Terraform module. Uključuje VPC, IAM, S3, RDS i networking između accountova putem Transit Gateway-a.</p>
+        <div class="tags"><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>EKS Cluster Provisioning sa Terraform</h3>
+        <p>Automatizovano podizanje Amazon EKS klastera sa managed node grupama, autoscalerom, IRSA i integracijom sa AWS Load Balancer Controllerom.</p>
+        <div class="tags"><span>Terraform</span><span>Kubernetes</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Datadog Monitoring Stack via Terraform</h3>
+        <p>Infrastruktura kao kod za kompletan Datadog setup: dashboardi, monitori, alerting, SLO-ovi i log pipeline konfiguracija — sve upravljano Terraformom.</p>
+        <div class="tags"><span>Terraform</span><span>Datadog</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Kubernetes GitOps sa ArgoCD</h3>
+        <p>Implementacija GitOps workflow-a koristeći ArgoCD na EKS klasteru. Terraform za infrastrukturu, Helm chartovi za aplikacije, automatski sync i rollback.</p>
+        <div class="tags"><span>Kubernetes</span><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>AWS Landing Zone Automatizacija</h3>
+        <p>Terraform-based Landing Zone sa Control Tower integracijom, SCPs, centralizovanim loggovanjem u S3 i CloudTrail auditom za enterprise okruženje.</p>
+        <div class="tags"><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Kubernetes Cost Optimization</h3>
+        <p>Analiza i optimizacija troškova EKS klastera: Karpenter za node provisioning, Vertical i Horizontal Pod Autoscaler, Spot instance strategija i Datadog cost monitoring.</p>
+        <div class="tags"><span>Kubernetes</span><span>AWS</span><span>Datadog</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Terraform CI/CD Pipeline</h3>
+        <p>Izgradnja CI/CD pipeline-a za Terraform koristeći GitHub Actions: plan/apply workflow, remote state u S3 sa DynamoDB lockom, Atlantis za pull request automatizaciju.</p>
+        <div class="tags"><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Datadog APM i Distributed Tracing</h3>
+        <p>Integracija Datadog APM-a u mikroservisnu arhitekturu na Kubernetesu. Instrumentacija servisa, trace korelacija sa logovima i kreiranje SLO dashboarda.</p>
+        <div class="tags"><span>Datadog</span><span>Kubernetes</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Terraform Kubernetes Operator Setup</h3>
+        <p>Deployment kritičnih Kubernetes operatora (cert-manager, external-secrets, external-dns) putem Terraform Helm providera sa environment-specific konfiguracijom.</p>
+        <div class="tags"><span>Terraform</span><span>Kubernetes</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>AWS Disaster Recovery sa Terraformom</h3>
+        <p>Dizajn i implementacija DR strategije (pilot light) između dvije AWS regije. Terraform moduli za replikaciju infrastrukture, RDS cross-region backup i Route53 failover.</p>
+        <div class="tags"><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+    <div class="project">
+        <h3>Centralizovani Observability Stack</h3>
+        <p>Izgradnja centralizovanog observability rješenja: Datadog agent deployment na EKS putem Terraform, agregacija metrika, logova i traceova sa alertingom za više timova.</p>
+        <div class="tags"><span>Datadog</span><span>Kubernetes</span><span>Terraform</span><span>AWS</span></div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Slobodno me kontaktirajte za saradnju, pitanja ili samo da pozdravite.</p>
+    <div class="contact-links">
+        <a href="mailto:miso.stamenic.sre@gmail.com" class="contact-btn">Email</a>
+        <a href="https://ba.linkedin.com/in/misostamenic" target="_blank" class="contact-btn">LinkedIn</a>
+        <a href="https://github.com/UptimeWizard" target="_blank" class="contact-btn">GitHub</a>
+    </div>
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Vaše ime" required />
+        <input type="email" id="email" placeholder="Vaš email" required />
+        <textarea id="message" rows="5" placeholder="Vaša poruka..." required></textarea>
+        <button type="submit">Pošalji poruku</button>
+    </form>
+    <p id="form-feedback"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
